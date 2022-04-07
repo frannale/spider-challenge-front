@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // tailwind
@@ -10,6 +10,7 @@ import "./assets/styles/index.css";
 import UserState from "./context/userState";
 
 // views
+import Home from "./views/Home.js";
 import Login from "./views/auth/Login.js";
 import Register from "./views/auth/Register.js";
 
@@ -17,7 +18,10 @@ import Register from "./views/auth/Register.js";
 import Header from "./views/Header";
 
 // root render
-render(
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
   <BrowserRouter>
     <UserState>
       <div className="flex flex-col h-screen">
@@ -25,10 +29,9 @@ render(
         <Routes>
           <Route path="/login" exact element={<Login />} />
           <Route path="/register" exact element={<Register />} />
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </UserState>
-  </BrowserRouter>,
-  document.getElementById("root")
+  </BrowserRouter>
 );
