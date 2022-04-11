@@ -22,10 +22,7 @@ function Clouds(props) {
 
   return (
     <>
-      <div
-        ref={myRef}
-        className="flex py-4 md:py-16 justify-center bg-sky-100 h-screen"
-      >
+      <div ref={myRef} className={props.className}>
         {props.children}
       </div>
     </>

@@ -13,16 +13,16 @@ function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center border-b-2 border-gray-100 py-5 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="#">
+              <Link to={"/"} id="link_header_logo">
                 <img className="h-8 w-auto sm:h-10" src={MovieLogo} alt="" />
-              </a>
+              </Link>
               <nav className="hidden md:flex space-x-10 ml-4 p-2">
                 <Link
                   to={"/"}
                   id="link_header_tvshows"
                   className="text-base font-medium text-gray-600 hover:text-gray-900"
                 >
-                  TVShows
+                  TV Shows
                 </Link>
                 <Link
                   to={"/"}
@@ -41,7 +41,7 @@ function Header() {
                 aria-expanded="false"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                <span className="sr-only">Abrir menu</span>
+                <span className="sr-only">Open menu</span>
                 <svg
                   className="h-8 w-8 mx-2 font-black"
                   xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ function Header() {
                 className="whitespace-nowrap text-base font-medium text-gray-600 hover:text-gray-900"
               >
                 {" "}
-                Iniciar sesión{" "}
+                Log in{" "}
               </Link>
               <Link
                 to={"/register"}
@@ -74,7 +74,7 @@ function Header() {
                 className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-900 hover:bg-blue-600"
               >
                 {" "}
-                Registrarse{" "}
+                Sign up{" "}
               </Link>
             </div>
           </div>
@@ -98,7 +98,7 @@ function Header() {
                       className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <span className="sr-only">Cerrar menu</span>
+                      <span className="sr-only">Close menu</span>
 
                       <svg
                         className="h-6 w-6"
@@ -143,7 +143,7 @@ function Header() {
                       </svg>
                       <span className="ml-3 text-base font-medium text-gray-900">
                         {" "}
-                        TVShows{" "}
+                        TV Shows{" "}
                       </span>
                     </Link>
                     <Link
@@ -184,10 +184,10 @@ function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {" "}
-                    Registrarse{" "}
+                    Sign up{" "}
                   </Link>
                   <p className="mt-6 text-center text-base font-medium text-gray-500">
-                    Ya registrado?
+                    Not signed yet?
                     <Link
                       to={"/login"}
                       id="link_header_login"
@@ -195,7 +195,7 @@ function Header() {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {" "}
-                      Iniciar sesión{" "}
+                      Log in{" "}
                     </Link>
                   </p>
                 </div>

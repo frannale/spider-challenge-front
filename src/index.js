@@ -10,12 +10,14 @@ import "./assets/styles/index.css";
 import UserState from "./context/userState";
 
 // views
-import Home from "./views/Home.js";
-import Login from "./views/auth/Login.js";
-import Register from "./views/auth/Register.js";
+import Home from "views/Home.js";
+import MediaDetail from "views/MediaDetail.js";
+// auth views
+import Login from "views/auth/Login.js";
+import Register from "views/auth/Register.js";
 
 // header
-import Header from "./views/Header";
+import Header from "views/Header";
 
 // root render
 const rootElement = document.getElementById("root");
@@ -29,6 +31,7 @@ root.render(
         <Routes>
           <Route path="/login" exact element={<Login />} />
           <Route path="/register" exact element={<Register />} />
+          <Route path="/media" exact element={<MediaDetail />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
